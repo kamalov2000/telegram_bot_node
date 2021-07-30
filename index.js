@@ -3,7 +3,7 @@ const {gameOptions, againOptions} = require('./options')
 const sequelize = require('./db');
 const UserModel = require('./models');
 
-const token = '1702630643:AAHXiY0MRDKeF1XcuGTxWmpgdcCdAgzt4gE'
+const token = '1938785966:AAH8wyv7QX9ddEIB_GZ8jg7m2KWQJW6Z_f8'
 
 const bot = new TelegramApi(token, {polling: true})
 
@@ -39,8 +39,8 @@ const start = async () => {
         try {
             if (text === '/start') {
                 await UserModel.create({chatId})
-                await bot.sendSticker(chatId, 'https://tlgrm.ru/_/stickers/ea5/382/ea53826d-c192-376a-b766-e5abc535f1c9/7.webp')
-                return bot.sendMessage(chatId, `Добро пожаловать в телеграм бот автора ютуб канала ULBI TV`);
+                await bot.sendSticker(chatId, 'https://tlgrm.ru/_/stickers/696/3ad/6963ad3a-2019-32d2-ac85-34af3c84e50b/11.webp')
+                return bot.sendMessage(chatId, `Добро пожаловать в телеграм бот автора Kamalov A.I`);
             }
             if (text === '/info') {
                 const user = await UserModel.findOne({chatId})
